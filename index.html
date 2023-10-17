@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
+
+    <div id="main" class="relative">
+      <div x-data="{
+      triggerNavItem(id) {
+          $scroll(id)
+      },
+      triggerMobileNavItem(id) {
+          mobileMenu = false;
+          this.triggerNavItem(id)
+      }
+  }">
+        <div class="w-full z-50 top-0 py-3 sm:py-5  absolute">
+          <div class="container flex items-center justify-between">
+          
+            <div class="block lg:hidden">
+              <button @click="mobileMenu = true">
+                <i class="bx bx-menu text-4xl text-white"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+  
+        <div>
+
+          <div class="relative bg-cover bg-center bg-no-repeat py-8"
+            style="background-image: url(img/guille_SR_v3001-.jpg)">
+            <div
+              class="absolute inset-0 z-20  bg-center bg-no-repeat">
+            </div>
+  
+            <div class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
+              <div class="flex flex-col items-center justify-center lg:flex-row">
+               
+                <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+                  <!-- <h1 class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
+                    Guille dupla.
+                  </h1> -->
+                  <div class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
+                    <div class="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
+                      <p class="font-body text-lg uppercase text-black text-center ">Nada importa mas que vivirlo como quieres</p>
+                      <div class="hidden sm:block">
+                        <i class="bx bx-chevron-right text-3xl text-yellow"></i>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="bg-white" id="about">
+            <div class="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
+              <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+                <h2 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+                  Guille dupla.
+                </h2>
+                <h4 class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-2xl">
+                  Nos quedamos con esa sonrisa que enamora y deja huella desde Sant Andreu a Hospitalet, con cómo nos enseñaste a ver la vida de diferente manera. Duro como una roca, risueño y explorador de lo inexplorable. Ciclista y anarquista..
+                </h4>
+                <!-- <p class="pt-6 font-body leading-relaxed text-grey-20">
+                  Me encanta recorrer el mundo subido a mi bici y conocer sitios y gente maravillosa. 
+                </p> -->
+                <div class="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
+                  <div class="flex items-center justify-center sm:justify-start">
+                    <!-- <p class="font-body text-lg font-semibold uppercase text-grey-20">
+                      Conoceme
+                    </p> -->
+                    <div class="hidden sm:block">
+                      <i class="bx bx-chevron-right text-2xl text-primary"></i>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
+                <div>
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      Amigo
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">100%</h3>
+                  </div>
+                  <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                    <div class="h-3 rounded-full bg-primary" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="pt-6">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">Violinista </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">100%</h3>
+                  </div>
+                  <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                    <div class="h-3 rounded-full bg-primary" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="pt-6">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                        Ciclista
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">100%</h3>
+                  </div>
+                  <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                    <div class="h-3 rounded-full bg-primary" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="pt-6">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">Luchador</h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">100%</h3>
+                  </div>
+                  <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                    <div class="h-3 rounded-full bg-primary" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+
+  
+          <div class="bg-gray-900" id="blog">
+
+            <div class="container py-16 md:py-20">
+              <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+                Fotografias
+              </h2>
+             
+              <div id="gallery" class="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10">
+                
+                  <!-- <div   style="background-image: url(/img/fotosWeb/-9107779962440779528_IMG_9509.jpeg)"
+                    class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72">
+                    <span
+                      class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
+                  </div> -->
+                  
+                  <!-- <div style="background-image: url(/img/fotosWeb/0480558c-fb5d-4051-a93b-083bf8db1c39.jpg)"
+                    class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72">
+                    <span class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
+                  </div>
+
+                  <div style="background-image: url(/img/fotosWeb/098b11aa-42e2-4e1a-a60d-ece2fe274ea5.jpg)"
+                    class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72">
+                    <span
+                      class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
+                  </div> -->
+
+                  <!-- <div style="background-image: url(/img/fotosWeb/098b11aa-42e2-4e1a-a60d-ece2fe274ea5.jpg)"
+                    class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72">
+                    <span
+                      class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
+                  </div>
+
+                  <div style="background-image: url(/img/fotosWeb/098b11aa-42e2-4e1a-a60d-ece2fe274ea5.jpg)"
+                    class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72">
+                    <span
+                      class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
+                  </div>
+                  
+                  <div style="background-image: url(/img/fotosWeb/098b11aa-42e2-4e1a-a60d-ece2fe274ea5.jpg)"
+                    class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72">
+                    <span
+                      class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
+                  </div> -->
+                
+              </div>
+
+            </div>
+
+          </div>
+  
+         
+  
+          
+  
+          <div class="relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24">
+            <h4  class="text-white text-center">Gracias a todas las personas que aportaron su granito de arena para que esta web fuera posible!</h4>
+          </div>
+        </div>
+  
+        
+  
+      </div>
+      <script src="js/script.js"></script>
+      <!-- <script src="/assets/js/main.js"></script> -->
+  
+  
+  </body>
+</html>
